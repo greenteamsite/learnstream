@@ -1,0 +1,33 @@
+@import './vars/size';
+
+.unit-page {
+  @include display-flex;
+  @include flex-flow(row, nowrap);
+  @include justify-content(center);
+
+  & > article {
+    @include flex(max-content);
+
+    margin-right: 1em;
+  }
+
+  & > aside {
+    @include flex(fit-content);
+  }
+
+  @media all and (max-width: ($screen-min-width*2)) {
+    @include flex-direction(column);
+
+    & > article {
+      @include flex(auto);
+
+      margin-right: 0;
+    }
+
+    & > aside {
+      @include flex(auto);
+
+      margin-top: 1em;
+    }
+  }
+}

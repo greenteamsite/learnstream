@@ -1,0 +1,29 @@
+@import './vars/size';
+@import './vars/color';
+
+html {
+  background-color: $color-background;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  color: $color-text;
+  min-width: $screen-min-width;
+}
+
+main {
+  padding: 1em;
+}
+
+footer {
+  color: $color-text-dark;
+  padding: 0.5em;
+  background-color: $color-background-light;
+}
+
+@media all and (max-width: $screen-min-width) {
+  main {
+    padding: 1em 0;
+  }
+}

@@ -1,0 +1,42 @@
+@mixin display-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin flex-flow($flex-direction, $flex-wrap) {
+  -webkit-flex-flow: $flex-direction $flex-wrap;
+  -moz-flex-flow: $flex-direction $flex-wrap;
+  flex-flow: $flex-direction $flex-wrap;
+}
+
+@mixin justify-content($val) {
+  -webkit-justify-content: $val;
+  -moz-justify-content: $val;
+  justify-content: $val;
+}
+
+@mixin flex-direction($val) {
+  -moz-flex-direction: $val;
+  -webkit-flex-direction: $val;
+  -ms-flexbox-direction: $val;
+  flex-direction: $val;
+}

@@ -1,0 +1,32 @@
+@import './vars/size';
+
+.dashboard-page {
+  @include display-flex;
+  @include flex-flow(row, wrap);
+  @include justify-content(center);
+
+  & > article {
+    @include flex(auto);
+
+    &:nth-child(1) {
+      margin-right: 1em;
+    }
+  }
+
+  & > aside {
+    @include flex(fit-content);
+  }
+
+  @media all and (max-width: ($screen-min-width*2)) {
+    @include flex-direction(column);
+
+    & > article {
+      @include flex(auto);
+
+      &:nth-child(1) {
+        margin-right: 0;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

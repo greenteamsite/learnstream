@@ -1,0 +1,41 @@
+@import './vars/size';
+
+.unit-box {
+  .unit-section {
+    .unit-section-cardtext {
+      @include display-flex;
+      @include flex-flow(row, nowrap);
+
+      .sectionImg {
+        @include flex(max-content);
+
+        margin-right: 1em;
+      }
+
+      .sectionInfo {
+        @include flex(fit-content);
+      }
+    }
+  }
+}
+
+@media all and (max-width: ($screen-min-width*2)) {
+  .unit-box {
+    .unit-section {
+      .unit-section-cardtext {
+        @include flex-direction(column);
+
+        .sectionImg {
+          @include flex(auto);
+
+          margin-right: 0;
+          margin-bottom: 1em;
+        }
+
+        .sectionInfo {
+          @include flex(auto);
+        }
+      }
+    }
+  }
+}
