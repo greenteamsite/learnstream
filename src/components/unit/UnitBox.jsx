@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
+import ForwardIcon from 'material-ui/svg-icons/content/forward';
 
 function UnitBox(props) {
   const sections = [];
@@ -39,8 +40,10 @@ function UnitBox(props) {
       {sections}
       <CardActions expandable={false}>
         <RaisedButton
+          labelPosition="before"
           label={props.btnSubmitLabel}
           onClick={props.onSubmit}
+          icon={<ForwardIcon />}
         />
       </CardActions>
     </Card>

@@ -3,10 +3,10 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
 function LanguageSelector({ currentLang, langs, onChange }) {
-  let items = [];
-  langs.forEach((item) => {
+  const items = [];
+  langs.forEach((item, index) => {
     items.push(
-      <MenuItem value={item.value} primaryText={item.name} />
+      <MenuItem key={index} value={item.value} primaryText={item.name} />
     );
   });
   return (

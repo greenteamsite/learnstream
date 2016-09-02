@@ -7,12 +7,6 @@ import UserInfoShort from './UserInfoShort';
 import LanguageSelector from './LanguageSelector';
 
 function TopMenuComponent(props) {
-  // const linkListNavItems = [];
-  // linkList.forEach((item) => {
-  //   linkListNavItems.push(
-  //     <NavItem eventKey={1} href={item.Url}>{item.Title}</NavItem>
-  //   );
-  // });
   const currentLang = props.userProfile.lang ? props.userProfile.lang : props.settings.defaultLang;
   return (
     <Toolbar className="topmenu-component">

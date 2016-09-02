@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle*/
 import * as _colorManipulator from 'material-ui/utils/colorManipulator';
-import * as _colors from './vars/colors';
+import * as _colors from 'material-ui/styles/colors';
+
 import * as _spacing from './vars/spacing';
 
 Object.defineProperty(exports, '__esModule', {
@@ -23,6 +24,7 @@ exports.default = {
     accent2Color: _colors.grey800,
     accent3Color: _colors.grey100,
     textColor: _colors.fullWhite,
+    secondaryTextColor: _colors.lightWhite,
     alternateTextColor: _colors.grey800,
     canvasColor: _colors.grey600,
     borderColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.3),

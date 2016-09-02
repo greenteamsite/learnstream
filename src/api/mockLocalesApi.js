@@ -14,7 +14,7 @@ const localesEn = {
   },
   unitPage: {
     title: 'Learning stream - unit',
-    btnSubmitLabel: 'Submit',
+    btnSubmitLabel: 'Check knowledge',
   },
 };
 

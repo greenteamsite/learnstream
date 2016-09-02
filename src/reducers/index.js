@@ -5,6 +5,7 @@ import dashboardPageReducer from './dashboardPageReducer';
 import unitPageReducer from './unitPageReducer';
 import userProfileReducer from './userProfileReducer';
 import settingsReducer from './settingsReducer';
+import moduleReducer from './moduleReducer';
 
 const rootReducer = combineReducers({
   locales: localesReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   userProfile: userProfileReducer,
   dashboardPageInfo: dashboardPageReducer,
   currentUnit: unitPageReducer,
+  currentModule: moduleReducer,
 });
 
 export default rootReducer;

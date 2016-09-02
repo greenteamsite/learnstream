@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import DocumentTitle from 'react-document-title';
+
 import UnitBox from './UnitBox';
+import ProgressIndicator from './UnitProgressIndicator';
 
 function UnitPage(props) {
   const baseClass = 'unit-page';
@@ -20,14 +22,7 @@ function UnitPage(props) {
           />
         </article>
         <aside>
-          <header>List of units</header>
-          <ul>
-            <li>Html 5 Intro</li>
-            <li>Html 5 Basic</li>
-            <li>Html 5 Deep</li>
-            <li>Html 5 Examples</li>
-            <li>Html 5 Conclusion</li>
-          </ul>
+          <ProgressIndicator title={props.module.title} items={props.module.units} />
         </aside>
       </section>
     </DocumentTitle>
@@ -43,10 +38,17 @@ const unitItem = {
   tests: PropTypes.array.isRequired,
 };
 
+const moduleItem = {
+  title: PropTypes.string.isRequired,
+  units: PropTypes.arrayOf(unitItem),
+};
+
 UnitPage.propTypes = {
   unit: PropTypes.shape(unitItem),
+  module: PropTypes.shape(moduleItem),
   onSubmit: PropTypes.func.isRequired,
   locales: PropTypes.object.isRequired,
+  palette: PropTypes.object.isRequired,
 };
 
 export default UnitPage;
