@@ -4,8 +4,7 @@
     "react"
   ],
   "plugins": [
-	  "transform-strict-mode",
-	  "transform-object-assign"
+	  "transform-strict-mode"
   ],
   "env": {
     "development": {
