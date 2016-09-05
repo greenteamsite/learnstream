@@ -8,7 +8,7 @@ import LabelOutlineIcon from 'material-ui/svg-icons/action/label-outline';
 import LabelIcon from 'material-ui/svg-icons/action/label';
 import ActionAssignmentIcon from 'material-ui/svg-icons/action/assignment';
 
-function UnitProgressIndicator(props) {
+function ModuleProgressIndicator(props) {
   const listItems = [];
   props.items.forEach((item, index) => {
     listItems.push(
@@ -46,9 +46,9 @@ const item = {
   isActive: PropTypes.bool.isRequired,
 };
 
-UnitProgressIndicator.propTypes = {
+ModuleProgressIndicator.propTypes = {
   title: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(item),
 };
 
-export default UnitProgressIndicator;
+export default ModuleProgressIndicator;

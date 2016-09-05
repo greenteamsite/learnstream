@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as ActionCreators from './unitPageActions';
+import * as ActionCreators from './unitActions';
 import * as ActionTypes from './actionTypes';
 
 describe('Actions', () => {

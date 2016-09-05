@@ -1,17 +1,17 @@
 import UnitApi from '../api/mockUnitApi';
 import * as ActionTypes from './actionTypes';
 
-export function getUnitPageSuccess(unit) {
+export function getUnitSuccess(unit) {
   return {
     type: ActionTypes.UNIT_GET_INFO_SUCCESS,
     unit,
   };
 }
 
-export function getUnitPage(id) {
+export function getUnit(id) {
   return dispatch => {
-    UnitApi.get(id).then(userProfile => {
-      dispatch(getUnitPageSuccess(userProfile));
+    UnitApi.get(id).then(unit => {
+      dispatch(getUnitSuccess(unit));
     }).catch(error => {
       throw (error);
     });

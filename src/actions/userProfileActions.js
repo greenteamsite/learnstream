@@ -8,6 +8,13 @@ export function changeLang(lang) {
   };
 }
 
+export function getCurrentModuleId(moduleId) {
+  return {
+    type: ActionTypes.USER_PROFILE_GET_CURRENT_MODULE_ID,
+    moduleId,
+  };
+}
+
 export function getUserProfileSuccess(userProfile) {
   return {
     type: ActionTypes.USER_PROFILE_GET_SUCCESS,

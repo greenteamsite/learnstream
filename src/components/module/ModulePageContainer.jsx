@@ -1,28 +1,28 @@
 import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import UnitPage from './UnitPage';
-import * as unitPageActions from '../../actions/unitPageActions';
+import ModulePage from './ModulePage';
+import * as unitActions from '../../actions/unitActions';
 import * as moduleActions from '../../actions/moduleActions';
 
-class UnitPageContainer extends React.Component {
+class ModulePageContainer extends React.Component {
   constructor(props) {
     super(props);
     this.submit = this.submit.bind(this);
   }
   componentDidMount() {
     // retrieve data
-    this.props.moduleActions.getModuleItem(1);
-    this.props.actions.getUnitPage(this.props.params.id);
+    this.props.moduleActions.getModuleItem(this.props.params.id);
+    // this.props.unitActions.getUnitPage(this.props.params.id);
   }
 
   submit() {
-    this.props.actions.submit({});
+    this.props.unitActions.submit({});
   }
 
   render() {
     return (
-      <UnitPage
+      <ModulePage
         unit={this.props.currentUnit}
         module={this.props.currentModule}
         locales={this.props.locales}
@@ -34,15 +34,15 @@ class UnitPageContainer extends React.Component {
 
 }
 
-UnitPageContainer.contextTypes = {
+ModulePageContainer.contextTypes = {
   muiTheme: PropTypes.object.isRequired,
 };
 
-UnitPageContainer.propTypes = {
+ModulePageContainer.propTypes = {
   currentUnit: PropTypes.object.isRequired,
   currentModule: PropTypes.object.isRequired,
   locales: PropTypes.object.isRequired,
-  actions: PropTypes.object.isRequired,
+  unitActions: PropTypes.object.isRequired,
   moduleActions: PropTypes.object.isRequired,
   params: PropTypes.object.isRequired,
 };
@@ -57,9 +57,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(unitPageActions, dispatch),
+    unitActions: bindActionCreators(unitActions, dispatch),
     moduleActions: bindActionCreators(moduleActions, dispatch),
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(UnitPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ModulePageContainer);

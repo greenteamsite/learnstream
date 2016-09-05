@@ -7,7 +7,7 @@ import MainLayout from './components/layout/MainLayout';
 // Pages
 import HomePageContainer from './components/home/HomePageContainer';
 import DashboardPageContainer from './components/dashboard/DashboardPageContainer';
-import UnitPageContainer from './components/unit/UnitPageContainer';
+import ModulePageContainer from './components/module/ModulePageContainer';
 import UserProfilePageContainer from './components/userProfile/UserProfilePageContainer';
 
 // Helpers
@@ -38,7 +38,7 @@ export default (
     <Route component={MainLayout}>
       <Route path="/" component={HomePageContainer} onEnter={requireNoAuth} />
       <Route path="dashboard" component={DashboardPageContainer} onEnter={requireAuth} />
-      <Route path="unit/:id" component={UnitPageContainer} />
+      <Route path="module/:id" component={ModulePageContainer} />
       <Route path="profile/:login" component={UserProfilePageContainer} />
     </Route>
   </Router>

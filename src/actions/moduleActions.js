@@ -9,11 +9,23 @@ export function getModuleItemSuccess(moduleItem) {
 }
 
 export function getModuleItem(moduleId) {
-  return dispatch => {
-    ModuleApi.get(moduleId).then(moduleItem => {
-      dispatch(getModuleItemSuccess(moduleItem));
-    }).catch(error => {
-      throw (error);
-    });
-  };
+  return dispatch => (
+    ModuleApi.get(moduleId).then(moduleItem =>
+      dispatch(getModuleItemSuccess(moduleItem)))
+  );
+}
+
+
+export function getLatestModule() {
+  return dispatch => (
+    ModuleApi.getLatest().then(moduleItem =>
+      dispatch(getModuleItemSuccess(moduleItem)))
+  );
+}
+
+export function getLatestUnit() {
+  return (dispatch, getState) => (
+    ModuleApi.getLatest().then(moduleItem =>
+      dispatch(getModuleItemSuccess(moduleItem)))
+  );
 }

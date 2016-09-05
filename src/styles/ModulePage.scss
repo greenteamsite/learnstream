@@ -1,6 +1,6 @@
 @import './vars/size';
 
-.unit-page {
+.module-page {
   @include display-flex;
   @include flex-flow(row, nowrap);
   @include justify-content(center);

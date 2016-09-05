@@ -1,4 +1,5 @@
-import DashboardPageApi from '../api/mockDashboardPageApi';
+import * as moduleActions from './moduleActions';
+
 import * as ActionTypes from './actionTypes';
 
 export function getDashboardPageInfoSuccess(dashboardPageInfo) {
@@ -9,10 +10,11 @@ export function getDashboardPageInfoSuccess(dashboardPageInfo) {
 }
 
 export function getDashboardPageInfo() {
-  return dispatch =>
-    DashboardPageApi.getDashboardPageInfo().then(dashboardPageInfo => {
-      dispatch(getDashboardPageInfoSuccess(dashboardPageInfo));
-    }).catch(error => {
-      throw (error);
+  return dispatch => {
+    // Getting the last module
+    dispatch(moduleActions.getLatestModule()).then(() => {
+      // Add some additional fields for dashboardPageInfo
+      dispatch(getDashboardPageInfoSuccess({}));
     });
+  };
 }

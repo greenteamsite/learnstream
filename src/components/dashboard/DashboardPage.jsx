@@ -9,22 +9,22 @@ function DashboardPage(props) {
       <section className={baseClass}>
         <article>
           <StartBox
-            title={props.currentCourse.title}
-            subtitle="current course"
+            title={props.currentModule.title}
+            subtitle={props.currentModule.subtitle}
             cardText="Progress: 26%"
-            cardHeader={props.currentCourse.currentUnit.title}
-            cardDescription={props.currentCourse.currentUnit.shortInfo}
+            cardHeader={props.currentUnit.title}
+            cardDescription={props.currentUnit.shortInfo}
             linkToStart={props.linkToStart}
             btnLabel={props.locales.continueBtnText}
           />
         </article>
         <article>
           <StartBox
-            title={props.currentCourse.title}
+            title={props.currentModule.title}
             subtitle="current course"
             cardText="Progress: 0%"
-            cardHeader={props.currentCourse.currentUnit.title}
-            cardDescription={props.currentCourse.currentUnit.shortInfo}
+            cardHeader={props.currentUnit.title}
+            cardDescription={props.currentUnit.shortInfo}
             linkToStart={props.linkToStart}
             btnLabel={props.locales.startBtnText}
           />
@@ -35,7 +35,8 @@ function DashboardPage(props) {
 }
 
 DashboardPage.propTypes = {
-  currentCourse: PropTypes.object.isRequired,
+  currentModule: PropTypes.object.isRequired,
+  currentUnit: PropTypes.object.isRequired,
   linkToStart: PropTypes.string,
   locales: PropTypes.object.isRequired,
 };

@@ -14,9 +14,10 @@ class DashboardPageContainer extends React.Component {
   render() {
     return (
       <DashboardPage
-        {...this.props.dashboardPageInfo}
+        currentModule={this.props.currentModule}
+        currentUnit={this.props.currentUnit}
         locales={this.props.locales}
-        linkToStart={'/unit/1/'}
+        linkToStart={'/module/1/'}
       />
     );
   }
@@ -24,14 +25,16 @@ class DashboardPageContainer extends React.Component {
 }
 
 DashboardPageContainer.propTypes = {
-  dashboardPageInfo: PropTypes.object.isRequired,
+  currentModule: PropTypes.object.isRequired,
+  currentUnit: PropTypes.object.isRequired,
   locales: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
-    dashboardPageInfo: state.dashboardPageInfo,
+    currentModule: state.currentModule,
+    currentUnit: state.currentUnit,
     locales: state.locales.dashboardPage,
   };
 }

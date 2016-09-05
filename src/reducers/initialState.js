@@ -31,16 +31,6 @@ export default {
     advantages: [],
   },
   dashboardPageInfo: {
-    currentCourse: {
-      id: 0,
-      title: '',
-      shortInfo: '',
-      currentUnit: {
-        id: 0,
-        title: '',
-        shortInfo: '',
-      },
-    },
     roles: [{ id: 0, title: '' }],
   },
   modules: [{ id: 0, title: '' }],
@@ -73,10 +63,12 @@ export default {
   currentModule: {
     id: 0,
     title: '',
+    subtitle: '',
     roleIds: [],
     units: [
       {
         id: 0,
+        passed: false,
         title: '',
         subtitle: '',
         pictureUrl: '',

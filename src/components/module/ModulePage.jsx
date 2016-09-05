@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react';
 import DocumentTitle from 'react-document-title';
 
 import UnitBox from './UnitBox';
-import ProgressIndicator from './UnitProgressIndicator';
+import ProgressIndicator from './ModuleProgressIndicator';
 
-function UnitPage(props) {
-  const baseClass = 'unit-page';
+function ModulePage(props) {
+  const baseClass = 'module-page';
   return (
     <DocumentTitle title={props.locales.title}>
       <section className={baseClass}>
@@ -43,7 +43,7 @@ const moduleItem = {
   units: PropTypes.arrayOf(unitItem),
 };
 
-UnitPage.propTypes = {
+ModulePage.propTypes = {
   unit: PropTypes.shape(unitItem),
   module: PropTypes.shape(moduleItem),
   onSubmit: PropTypes.func.isRequired,
@@ -51,4 +51,4 @@ UnitPage.propTypes = {
   palette: PropTypes.object.isRequired,
 };
 
-export default UnitPage;
+export default ModulePage;

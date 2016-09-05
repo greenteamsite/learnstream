@@ -140,6 +140,15 @@ class ModuleApi {
       }, delay);
     });
   }
+
+// Should find first module that have not all passed units
+  static getLatest() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(Object.assign({}, moduleItem));
+      }, delay);
+    });
+  }
 }
 
 export default ModuleApi;

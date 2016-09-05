@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 // import * as ActionTypes from '../actions/actionTypes';
-import reducer from './unitPageReducer';
+import reducer from './unitReducer';
 
 describe('Reducers::unitPageReducer', () => {
   function getAppState() {
