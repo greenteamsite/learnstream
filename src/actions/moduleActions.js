@@ -23,9 +23,9 @@ export function getLatestModule() {
   );
 }
 
-export function getLatestUnit() {
-  return (dispatch, getState) => (
-    ModuleApi.getLatest().then(moduleItem =>
-      dispatch(getModuleItemSuccess(moduleItem)))
-  );
+export function setCurrentUnit(unitId) {
+  return {
+    type: ActionTypes.MODULES_SET_CURRENT_UNIT_ID,
+    unitId,
+  };
 }

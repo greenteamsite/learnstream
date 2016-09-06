@@ -65,6 +65,7 @@ export default {
     title: '',
     subtitle: '',
     roleIds: [],
+    currentUnitId: 0,
     units: [
       {
         id: 0,
