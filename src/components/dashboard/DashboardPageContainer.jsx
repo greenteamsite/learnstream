@@ -16,6 +16,7 @@ class DashboardPageContainer extends React.Component {
       <DashboardPage
         currentModule={this.props.currentModule}
         currentUnit={this.props.currentUnit}
+        isStart={this.props.isStart}
         locales={this.props.locales}
         linkToStart={'/module/1/'}
       />
@@ -27,14 +28,23 @@ class DashboardPageContainer extends React.Component {
 DashboardPageContainer.propTypes = {
   currentModule: PropTypes.object.isRequired,
   currentUnit: PropTypes.object.isRequired,
+  isStart: PropTypes.bool.isRequired,
   locales: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
+  const currentUnit = state.currentModule.units.find((item) => (
+    item.id === state.currentModule.currentUnitId ||
+      state.currentModule.currentUnitId === 0
+  ));
+
+  const isStart = currentUnit.id === state.currentModule.units[0].id;
+
   return {
     currentModule: state.currentModule,
-    currentUnit: state.currentUnit,
+    currentUnit,
+    isStart,
     locales: state.locales.dashboardPage,
   };
 }

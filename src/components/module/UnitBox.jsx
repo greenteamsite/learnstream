@@ -5,28 +5,30 @@ import ForwardIcon from 'material-ui/svg-icons/content/forward';
 
 function UnitBox(props) {
   const sections = [];
-  props.sections.forEach((item, index) => {
-    sections.push(
-      <Card className="unit-section" initiallyExpanded key={index} style={{ margin: '0.5em', backgroundColor: '#333' }}>
-        <CardHeader
-          title={item.title}
-          subtitle={item.subtitle}
-        />
-        <CardText className="unit-section-cardtext">
+  if (props.sections) {
+    props.sections.forEach((item, index) => {
+      sections.push(
+        <Card className="unit-section" initiallyExpanded key={index} style={{ margin: '0.5em', backgroundColor: '#333' }}>
+          <CardHeader
+            title={item.title}
+            subtitle={item.subtitle}
+          />
+          <CardText className="unit-section-cardtext">
             {
               item.pictureUrl ?
                 <div className="sectionImg">
                   <img alt={item.title} src={item.pictureUrl} />
                 </div>
-              : null
+                : null
             }
-          <div className="sectionInfo">
-            {item.info}
-          </div>
-        </CardText>
-      </Card>
-    );
-  });
+            <div className="sectionInfo">
+              {item.info}
+            </div>
+          </CardText>
+        </Card>
+      );
+    });
+  }
 
   return (
     <Card className="unit-box" initiallyExpanded>
@@ -55,7 +57,7 @@ UnitBox.propTypes = {
   subtitle: PropTypes.string.isRequired,
   pictureUrl: PropTypes.string,
   info: PropTypes.string.isRequired,
-  sections: React.PropTypes.array,
+  sections: React.PropTypes.array.isRequired,
   tests: PropTypes.array,
   onSubmit: PropTypes.func.isRequired,
   btnSubmitLabel: PropTypes.string.isRequired,

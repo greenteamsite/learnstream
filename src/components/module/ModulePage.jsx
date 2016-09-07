@@ -34,7 +34,7 @@ const unitItem = {
   subtitle: PropTypes.string.isRequired,
   pictureUrl: PropTypes.string,
   info: PropTypes.string.isRequired,
-  sections: PropTypes.array,
+  sections: PropTypes.array.isRequired,
   tests: PropTypes.array.isRequired,
 };
 

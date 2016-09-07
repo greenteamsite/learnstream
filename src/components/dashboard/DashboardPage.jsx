@@ -15,7 +15,7 @@ function DashboardPage(props) {
             cardHeader={props.currentUnit.title}
             cardDescription={props.currentUnit.shortInfo}
             linkToStart={props.linkToStart}
-            btnLabel={props.locales.continueBtnText}
+            btnLabel={props.isStart ? props.locales.startBtnText : props.locales.continueBtnText}
           />
         </article>
         <article>
@@ -26,7 +26,7 @@ function DashboardPage(props) {
             cardHeader={props.currentUnit.title}
             cardDescription={props.currentUnit.shortInfo}
             linkToStart={props.linkToStart}
-            btnLabel={props.locales.startBtnText}
+            btnLabel={props.isStart ? props.locales.startBtnText : props.locales.continueBtnText}
           />
         </article>
       </section>
@@ -37,6 +37,7 @@ function DashboardPage(props) {
 DashboardPage.propTypes = {
   currentModule: PropTypes.object.isRequired,
   currentUnit: PropTypes.object.isRequired,
+  isStart: PropTypes.bool.isRequired,
   linkToStart: PropTypes.string,
   locales: PropTypes.object.isRequired,
 };

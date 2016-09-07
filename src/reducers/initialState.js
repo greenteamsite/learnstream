@@ -34,32 +34,6 @@ export default {
     roles: [{ id: 0, title: '' }],
   },
   modules: [{ id: 0, title: '' }],
-  currentUnit: {
-    id: 0,
-    title: '',
-    subtitle: '',
-    info: '',
-    sections: [
-      {
-        title: '',
-        subtitle: '',
-        pictureUrl: '',
-        info: '',
-        examples: [
-          {
-            description: '',
-            code: '',
-          },
-        ],
-      },
-    ],
-    tests: [
-      {
-        question: { text: '', score: 0 },
-        answers: [{ text: '', isCorrect: false }],
-      },
-    ],
-  },
   currentModule: {
     id: 0,
     title: '',
@@ -75,6 +49,7 @@ export default {
         pictureUrl: '',
         shortInfo: '',
         info: '',
+        sections: [],
         examples: [],
         tests: [
           {

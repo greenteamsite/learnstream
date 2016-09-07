@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ModulePage from './ModulePage';
-import * as unitActions from '../../actions/unitActions';
 import * as moduleActions from '../../actions/moduleActions';
 
 class ModulePageContainer extends React.Component {
@@ -12,12 +11,11 @@ class ModulePageContainer extends React.Component {
   }
   componentDidMount() {
     // retrieve data
-    this.props.moduleActions.getModuleItem(this.props.params.id);
-    // this.props.unitActions.getUnitPage(this.props.params.id);
+    this.props.actions.getModuleItem(parseInt(this.props.params.id, 10));
   }
 
   submit() {
-    this.props.unitActions.submit({});
+    // this.props.moduleActions.submit({});
   }
 
   render() {
@@ -42,14 +40,18 @@ ModulePageContainer.propTypes = {
   currentUnit: PropTypes.object.isRequired,
   currentModule: PropTypes.object.isRequired,
   locales: PropTypes.object.isRequired,
-  unitActions: PropTypes.object.isRequired,
-  moduleActions: PropTypes.object.isRequired,
+  actions: PropTypes.object.isRequired,
   params: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
+  const currentUnit = state.currentModule.units.find((item) => (
+    item.id === state.currentModule.currentUnitId ||
+      state.currentModule.currentUnitId === 0
+  ));
+
   return {
-    currentUnit: state.currentUnit,
+    currentUnit,
     currentModule: state.currentModule,
     locales: state.locales.unitPage,
   };
@@ -57,8 +59,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    unitActions: bindActionCreators(unitActions, dispatch),
-    moduleActions: bindActionCreators(moduleActions, dispatch),
+    actions: bindActionCreators(moduleActions, dispatch),
   };
 }
 
