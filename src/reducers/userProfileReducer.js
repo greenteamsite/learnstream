@@ -7,7 +7,7 @@ export default function userProfileReducer(state = initialState.userProfile, act
       return action.userProfile;
     }
 
-    case ActionTypes.USER_PROFILE_CHANGE_LANG: {
+    case ActionTypes.USER_PROFILE_CHANGE_LANG_SUCCESS: {
       const newState = Object.assign({}, state);
       newState.lang = action.lang;
       return newState;

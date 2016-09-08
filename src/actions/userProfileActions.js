@@ -1,10 +1,19 @@
 import UserProfileApi from '../api/mockUserProfileApi';
 import * as ActionTypes from './actionTypes';
+import { getLocales } from './localesActions';
+
+export function changeLangSuccess(lang) {
+  return {
+    type: ActionTypes.USER_PROFILE_CHANGE_LANG_SUCCESS,
+    lang,
+  };
+}
 
 export function changeLang(lang) {
-  return {
-    type: ActionTypes.USER_PROFILE_CHANGE_LANG,
-    lang,
+  return dispatch => {
+    dispatch(getLocales(lang)).then(() => {
+      dispatch(changeLangSuccess(lang));
+    });
   };
 }
 

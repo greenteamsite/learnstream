@@ -13,7 +13,7 @@ export default {
     userProfilePage: {
       title: 'Learning stream',
     },
-    unitPage: {
+    modulePage: {
       title: 'Learning stream',
       btnSubmitLabel: 'Submit',
     },
@@ -47,10 +47,8 @@ export default {
         title: '',
         subtitle: '',
         pictureUrl: '',
-        shortInfo: '',
         info: '',
         sections: [],
-        examples: [],
         tests: [
           {
             question: { text: '', score: 0 },

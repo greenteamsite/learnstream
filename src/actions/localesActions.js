@@ -9,11 +9,11 @@ export function getLocalesSuccess(locales) {
 }
 
 export function getLocales(lang) {
-  return dispatch => {
+  return dispatch => (
     LocalesApi.getLocales(lang).then(locales => {
       dispatch(getLocalesSuccess(locales));
     }).catch(error => {
       throw (error);
-    });
-  };
+    })
+  );
 }

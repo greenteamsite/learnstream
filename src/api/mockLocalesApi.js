@@ -1,29 +1,14 @@
 import delay from './delay';
 
-const localesEn = {
-  homePage: {
-    title: 'Learning stream - home',
-  },
-  dashboardPage: {
-    title: 'Learning stream - dashboard',
-    startBtnText: 'Start',
-    continueBtnText: 'Continue',
-  },
-  userProfilePage: {
-    title: 'Learning stream - user profile',
-  },
-  unitPage: {
-    title: 'Learning stream - unit',
-    btnSubmitLabel: 'Check knowledge',
-  },
-};
+import localesEn from './fakeData/localesEn.json';
+import localesUk from './fakeData/localesUk.json';
 
 class LocalesApi {
   static getLocales(lang) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        if (lang === 'en') {
-          resolve(Object.assign({}, localesEn));
+        if (lang === 'uk') {
+          resolve(Object.assign({}, localesUk));
         } else {
           resolve(Object.assign({}, localesEn));
         }

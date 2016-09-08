@@ -1,0 +1,17 @@
+{
+    "homePage": {
+        "title": "Learning stream Uk - початкова"
+    },
+    "dashboardPage": {
+        "title": "Learning stream - дошка",
+        "startBtnText": "Почати",
+        "continueBtnText": "Продовжити"
+    },
+    "userProfilePage": {
+        "title": "Learning stream - user profile"
+    },
+    "modulePage": {
+        "title": "Learning stream - модуль",
+        "btnSubmitLabel": "Перевірити знання"
+    }
+}

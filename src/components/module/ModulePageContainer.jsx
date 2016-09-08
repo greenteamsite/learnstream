@@ -24,6 +24,7 @@ class ModulePageContainer extends React.Component {
         unit={this.props.currentUnit}
         module={this.props.currentModule}
         locales={this.props.locales}
+        onToggle={this.actions.toggle}
         onSubmit={this.submit}
         palette={this.context.muiTheme.palette} // For example
       />
@@ -53,7 +54,7 @@ function mapStateToProps(state) {
   return {
     currentUnit,
     currentModule: state.currentModule,
-    locales: state.locales.unitPage,
+    locales: state.locales.modulePage,
   };
 }
 

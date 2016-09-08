@@ -15,7 +15,7 @@ function ModuleProgressIndicator(props) {
       <ListItem
         key={index}
         leftIcon={item.isActive ? <LabelOutlineIcon /> : <LabelIcon />}
-        rightIcon={item.isCompleted ? <ToggleCheckBoxIcon /> : <ToggleCheckBoxBlankIcon />}
+        rightIcon={item.passed ? <ToggleCheckBoxIcon /> : <ToggleCheckBoxBlankIcon />}
         primaryText={item.title}
         secondaryText={item.subtitle}
       />
@@ -42,7 +42,7 @@ function ModuleProgressIndicator(props) {
 const item = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  isCompleted: PropTypes.bool.isRequired,
+  passed: PropTypes.bool.isRequired,
   isActive: PropTypes.bool.isRequired,
 };
 

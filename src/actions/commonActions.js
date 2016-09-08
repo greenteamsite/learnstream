@@ -5,14 +5,14 @@ import * as settingsActions from './settingsActions';
 export function loadApp() {
   return dispatch => {
     // TODO: Add local determination
-    dispatch(localesActions.getLocales('en'));
+    dispatch(localesActions.getLocales('uk'));
      // TODO: Add function for getting current login
     dispatch(userProfileActions.getUserProfile('mark'));
 
     dispatch(settingsActions.getSettingsSuccess({
       defaultLang: 'uk',
       supportedLangs: [
-        { name: 'ukrainian', value: 'uk' },
+        { name: 'українська', value: 'uk' },
         { name: 'english', value: 'en' },
       ],
     }));

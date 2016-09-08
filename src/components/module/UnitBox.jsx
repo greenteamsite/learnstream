@@ -43,6 +43,12 @@ function UnitBox(props) {
       <CardActions expandable={false}>
         <RaisedButton
           labelPosition="before"
+          label={props.btnToggleLabel}
+          onClick={props.onToggle}
+          icon={<ForwardIcon />}
+        />
+        <RaisedButton
+          labelPosition="before"
           label={props.btnSubmitLabel}
           onClick={props.onSubmit}
           icon={<ForwardIcon />}
@@ -59,7 +65,9 @@ UnitBox.propTypes = {
   info: PropTypes.string.isRequired,
   sections: React.PropTypes.array.isRequired,
   tests: PropTypes.array,
+  onToggle: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  btnToggleLabel: PropTypes.string.isRequired,
   btnSubmitLabel: PropTypes.string.isRequired,
 };
 

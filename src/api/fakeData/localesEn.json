@@ -1,0 +1,17 @@
+{
+    "homePage": {
+        "title": "Learning stream - home"
+    },
+    "dashboardPage": {
+        "title": "Learning stream - dashboard",
+        "startBtnText": "Start",
+        "continueBtnText": "Continue"
+    },
+    "userProfilePage": {
+        "title": "Learning stream - user profile"
+    },
+    "modulePage": {
+        "title": "Learning stream - unit",
+        "btnSubmitLabel": "Check knowledge"
+    }
+}
