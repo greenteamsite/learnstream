@@ -49,22 +49,29 @@
                 "title": "What is a HTTP?",
                 "subtitle": "222",
                 "info": "",
-                "score": 5
+                "score": 5,
+                "answerId": 0
               },
               "answers": [
                 {
+                  "id": 1,
                   "title": "The Internet",
                   "subtitle": "222",
+                  "info": "222",
                   "isCorrect": false
                 },
                 {
+                  "id": 2,
                   "title": "The Protocol",
                   "subtitle": "222",
+                  "info": "222",
                   "isCorrect": true
                 },
                 {
+                  "id": 3,
                   "title": "The Internet",
                   "subtitle": "222",
+                  "info": "222",
                   "isCorrect": false
                 }
               ]
@@ -108,22 +115,29 @@
                 "title": "What is a HTTP?",
                 "subtitle": "222",
                 "info": "",
-                "score": 5
+                "score": 5,
+                "answerId": 0
               },
               "answers": [
                 {
+                  "id": 1,
                   "title": "The Internet",
                   "subtitle": "222",
+                  "info": "222",
                   "isCorrect": false
                 },
                 {
+                  "id": 2,
                   "title": "The Protocol",
                   "subtitle": "222",
+                  "info": "222",
                   "isCorrect": true
                 },
                 {
+                  "id": 3,
                   "title": "The Internet",
                   "subtitle": "222",
+                  "info": "222",
                   "isCorrect": false
                 }
               ]

@@ -58,6 +58,7 @@ export default {
               subtitle: '',
               info: '',
               score: 0,
+              answerId: 0,
             },
             answers: [],
           },
