@@ -29,3 +29,9 @@ export function setCurrentUnit(unitId) {
     unitId,
   };
 }
+
+export function toggleCurrentUnitToTest() {
+  return {
+    type: ActionTypes.MODULES_TOGGLE_CURRENT_UNIT_TO_TEST,
+  };
+}

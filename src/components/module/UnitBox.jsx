@@ -3,33 +3,10 @@ import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import ForwardIcon from 'material-ui/svg-icons/content/forward';
 
-function UnitBox(props) {
-  const sections = [];
-  if (props.sections) {
-    props.sections.forEach((item, index) => {
-      sections.push(
-        <Card className="unit-section" initiallyExpanded key={index} style={{ margin: '0.5em', backgroundColor: '#333' }}>
-          <CardHeader
-            title={item.title}
-            subtitle={item.subtitle}
-          />
-          <CardText className="unit-section-cardtext">
-            {
-              item.pictureUrl ?
-                <div className="sectionImg">
-                  <img alt={item.title} src={item.pictureUrl} />
-                </div>
-                : null
-            }
-            <div className="sectionInfo">
-              {item.info}
-            </div>
-          </CardText>
-        </Card>
-      );
-    });
-  }
+import UnitInfoContent from './UnitInfoContent';
+import UnitTestContent from './UnitTestContent';
 
+function UnitBox(props) {
   return (
     <Card className="unit-box" initiallyExpanded>
       <CardHeader
@@ -39,20 +16,29 @@ function UnitBox(props) {
       <CardText>
         {props.info}
       </CardText>
-      {sections}
+      {
+        props.toggled ?
+          <UnitTestContent tests={props.tests} />
+        :
+          <UnitInfoContent sections={props.sections} />
+      }
       <CardActions expandable={false}>
-        <RaisedButton
-          labelPosition="before"
-          label={props.btnToggleLabel}
-          onClick={props.onToggle}
-          icon={<ForwardIcon />}
-        />
-        <RaisedButton
-          labelPosition="before"
-          label={props.btnSubmitLabel}
-          onClick={props.onSubmit}
-          icon={<ForwardIcon />}
-        />
+        {
+          props.toggled ?
+            <RaisedButton
+              labelPosition="before"
+              label={props.btnSubmitLabel}
+              onClick={props.onSubmit}
+              icon={<ForwardIcon />}
+            />
+          :
+            <RaisedButton
+              labelPosition="before"
+              label={props.btnToggleLabel}
+              onClick={props.onToggle}
+              icon={<ForwardIcon />}
+            />
+        }
       </CardActions>
     </Card>
   );
@@ -63,8 +49,9 @@ UnitBox.propTypes = {
   subtitle: PropTypes.string.isRequired,
   pictureUrl: PropTypes.string,
   info: PropTypes.string.isRequired,
-  sections: React.PropTypes.array.isRequired,
+  sections: PropTypes.array.isRequired,
   tests: PropTypes.array,
+  toggled: PropTypes.bool,
   onToggle: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   btnToggleLabel: PropTypes.string.isRequired,

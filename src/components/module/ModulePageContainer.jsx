@@ -24,7 +24,8 @@ class ModulePageContainer extends React.Component {
         unit={this.props.currentUnit}
         module={this.props.currentModule}
         locales={this.props.locales}
-        onToggle={this.actions.toggle}
+        currentUnitToggled={this.props.currentModule.currentUnitToggled}
+        onToggle={this.props.actions.toggleCurrentUnitToTest}
         onSubmit={this.submit}
         palette={this.context.muiTheme.palette} // For example
       />
@@ -41,6 +42,7 @@ ModulePageContainer.propTypes = {
   currentUnit: PropTypes.object.isRequired,
   currentModule: PropTypes.object.isRequired,
   locales: PropTypes.object.isRequired,
+  currentUnitToggled: PropTypes.bool,
   actions: PropTypes.object.isRequired,
   params: PropTypes.object.isRequired,
 };

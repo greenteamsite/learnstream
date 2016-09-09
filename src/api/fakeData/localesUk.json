@@ -12,6 +12,7 @@
     },
     "modulePage": {
         "title": "Learning stream - модуль",
-        "btnSubmitLabel": "Перевірити знання"
+        "btnSubmitLabel": "Відправити",
+        "btnToggleLabel": "Перевірити знання"
     }
 }

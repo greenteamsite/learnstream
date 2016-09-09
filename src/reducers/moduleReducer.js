@@ -12,6 +12,12 @@ export default function moduleReducer(state = initialState.currentModule, action
       return newState;
     }
 
+    case ActionTypes.MODULES_TOGGLE_CURRENT_UNIT_TO_TEST: {
+      const newState = Object.assign({}, state);
+      newState.currentUnitToggled = true;
+      return newState;
+    }
+
     default:
       return state;
   }

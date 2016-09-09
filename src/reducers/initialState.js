@@ -15,7 +15,8 @@ export default {
     },
     modulePage: {
       title: 'Learning stream',
-      btnSubmitLabel: 'Submit',
+      btnSubmitLabel: '',
+      btnToggleLabel: '',
     },
   },
   userProfile: {
@@ -40,6 +41,7 @@ export default {
     subtitle: '',
     roleIds: [],
     currentUnitId: 0,
+    currentUnitToggled: false,
     units: [
       {
         id: 0,
@@ -51,8 +53,13 @@ export default {
         sections: [],
         tests: [
           {
-            question: { text: '', score: 0 },
-            answers: [{ text: '', isCorrect: false }],
+            question: {
+              title: '',
+              subtitle: '',
+              info: '',
+              score: 0,
+            },
+            answers: [],
           },
         ],
       },

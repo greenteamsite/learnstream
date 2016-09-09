@@ -17,8 +17,11 @@ function ModulePage(props) {
             info={props.unit.info}
             sections={props.unit.sections}
             tests={props.unit.tests}
+            toggled={props.currentUnitToggled}
             onSubmit={props.onSubmit}
+            onToggle={props.onToggle}
             btnSubmitLabel={props.locales.btnSubmitLabel}
+            btnToggleLabel={props.locales.btnToggleLabel}
           />
         </article>
         <aside>
@@ -46,7 +49,9 @@ const moduleItem = {
 ModulePage.propTypes = {
   unit: PropTypes.shape(unitItem),
   module: PropTypes.shape(moduleItem),
+  currentUnitToggled: PropTypes.bool,
   onSubmit: PropTypes.func.isRequired,
+  onToggle: PropTypes.func.isRequired,
   locales: PropTypes.object.isRequired,
   palette: PropTypes.object.isRequired,
 };
