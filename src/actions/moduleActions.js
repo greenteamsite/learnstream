@@ -8,9 +8,9 @@ export function getModuleItemSuccess(moduleItem) {
   };
 }
 
-export function getModuleItem(moduleId) {
+export function getModuleItem(moduleId, lang) {
   return dispatch => (
-    ModuleApi.get(moduleId).then(moduleItem =>
+    ModuleApi.get(moduleId, lang).then(moduleItem =>
       dispatch(getModuleItemSuccess(moduleItem)))
   );
 }

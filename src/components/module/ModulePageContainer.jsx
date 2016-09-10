@@ -11,7 +11,7 @@ class ModulePageContainer extends React.Component {
   }
   componentDidMount() {
     // retrieve data
-    this.props.actions.getModuleItem(parseInt(this.props.params.id, 10));
+    this.props.actions.getModuleItem(parseInt(this.props.params.id, 10), this.props.userProfile.lang);
   }
 
   submit() {
@@ -45,6 +45,7 @@ ModulePageContainer.propTypes = {
   currentUnitToggled: PropTypes.bool,
   actions: PropTypes.object.isRequired,
   params: PropTypes.object.isRequired,
+  userProfile: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
@@ -57,6 +58,7 @@ function mapStateToProps(state) {
     currentUnit,
     currentModule: state.currentModule,
     locales: state.locales.modulePage,
+    userProfile: state.userProfile,
   };
 }
 

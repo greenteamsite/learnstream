@@ -2,8 +2,6 @@
   "modules": [
     {
       "id": 1,
-      "title": "Introduce Web Developing",
-      "subtitle": "---",
       "roleIds": [
         1,
         2,
@@ -11,68 +9,149 @@
       ],
       "currentUnitId": 1,
       "currentUnitToggled": false,
+      "resources": {
+        "en": {
+          "title": "Introduce Web Developing",
+          "subtitle": "---"
+        },
+        "uk": {
+          "title": "Введення у веб розробку",
+          "subtitle": "---"
+        }
+      },
       "units": [
         {
           "id": 1,
-          "title": "HTTP - Overview",
-          "subtitle": "Basic Architecture",
           "pictureUrl": "/images/units/http.jpg",
-          "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems.",
+          "resources": {
+            "en": {
+              "title": "HTTP - Overview",
+              "subtitle": "Basic Architecture",
+              "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems."
+            },
+            "uk": {
+              "title": "HTTP - Огляд",
+              "subtitle": "Основи архітектури",
+              "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems."
+            }
+          },
           "sections": [
             {
-              "title": "Basic Architecture",
-              "subtitle": "111",
               "pictureUrl": "/images/units/cgiarch.gif",
-              "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients, and the Web server acts as a server.",
-              "examples": []
+              "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                                 ConnectionKeep-Alive",
+              "resources": {
+                "en": {
+                  "title": "Basic Architecture",
+                  "subtitle": "111",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                },
+                "uk": {
+                  "title": "Basic Architecture",
+                  "subtitle": "111",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                }
+              }
             },
             {
-              "title": "GET Method",
-              "subtitle": "222",
               "pictureUrl": "",
-              "info": "A GET request retrieves data from a web server by specifying parameters in the URL portion of the request.",
-              "examples": [
-                {
-                  "description": "The following example makes use of GET method to fetch hello.htm",
-                  "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                 Connection: Keep-Alive"
+              "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                                 ConnectionKeep-Alive",
+              "resources": {
+                "en": {
+                  "title": "GET Method",
+                  "subtitle": "222",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
                 },
-                {
-                  "description": "The server response against the above GET request will be as follows",
-                  "code": "HTTP/1.1 200 OK\n                 Date: Mon, 27 Jul 2009 12:28:53 GMT\n                 Server: Apache/2.2.14 (Win32)\n                 Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT\n                 ETag: \"34aa387-d-1568eb00\"\n                 Vary: Authorization,Accept\n                 Accept-Ranges: bytes\n                 Content-Length: 88\n                 Content-Type: text/html\n                 Connection: Closed"
+                "uk": {
+                  "title": "GET метод",
+                  "subtitle": "111",
+                  "info": "A GET request retrieves data from a web server by specifying parameters in the URL portion of the request.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
                 }
-              ]
+              }
             }
           ],
           "tests": [
             {
               "question": {
-                "title": "What is a HTTP?",
-                "subtitle": "222",
-                "info": "",
+                "id": 1,
+                "resources": {
+                  "en": {
+                    "title": "Basic Architecture",
+                    "subtitle": "111",
+                    "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                    "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                  },
+                  "uk": {
+                    "title": "Basic Architecture",
+                    "subtitle": "111",
+                    "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                    "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                  }
+                },
+                "code": "",
                 "score": 5,
                 "answerId": 0
               },
               "answers": [
                 {
                   "id": 1,
-                  "title": "The Internet",
-                  "subtitle": "222",
-                  "info": "222",
-                  "isCorrect": false
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 1",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 1",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
                 },
                 {
                   "id": 2,
-                  "title": "The Protocol",
-                  "subtitle": "222",
-                  "info": "222",
-                  "isCorrect": true
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 2",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 2",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
                 },
                 {
                   "id": 3,
-                  "title": "The Internet",
-                  "subtitle": "222",
-                  "info": "222",
-                  "isCorrect": false
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 3",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 3",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
                 }
               ]
             }
@@ -80,65 +159,136 @@
         },
         {
           "id": 2,
-          "title": "SPA - Overview",
-          "subtitle": "Single Page App",
           "pictureUrl": "/images/units/http.jpg",
-          "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems.",
+          "resources": {
+            "en": {
+              "title": "HTTP - Overview 2222",
+              "subtitle": "Basic Architecture",
+              "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems."
+            },
+            "uk": {
+              "title": "HTTP - Огляд",
+              "subtitle": "Основи архітектури",
+              "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems."
+            }
+          },
           "sections": [
             {
-              "title": "Basic Architecture",
-              "subtitle": "111",
               "pictureUrl": "/images/units/cgiarch.gif",
-              "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients, and the Web server acts as a server.",
-              "examples": []
+              "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                                 ConnectionKeep-Alive",
+              "resources": {
+                "en": {
+                  "title": "Basic Architecture",
+                  "subtitle": "111",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                },
+                "uk": {
+                  "title": "Basic Architecture",
+                  "subtitle": "111",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                }
+              }
             },
             {
-              "title": "GET Method",
-              "subtitle": "222",
               "pictureUrl": "",
-              "info": "A GET request retrieves data from a web server by specifying parameters in the URL portion of the request.",
-              "examples": [
-                {
-                  "description": "The following example makes use of GET method to fetch hello.htm",
-                  "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                 Connection: Keep-Alive"
+              "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                                 ConnectionKeep-Alive",
+              "resources": {
+                "en": {
+                  "title": "GET Method",
+                  "subtitle": "222",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
                 },
-                {
-                  "description": "The server response against the above GET request will be as follows",
-                  "code": "HTTP/1.1 200 OK\n                 Date: Mon, 27 Jul 2009 12:28:53 GMT\n                 Server: Apache/2.2.14 (Win32)\n                 Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT\n                 ETag: \"34aa387-d-1568eb00\"\n                 Vary: Authorization,Accept\n                 Accept-Ranges: bytes\n                 Content-Length: 88\n                 Content-Type: text/html\n                 Connection: Closed"
+                "uk": {
+                  "title": "GET метод",
+                  "subtitle": "111",
+                  "info": "A GET request retrieves data from a web server by specifying parameters in the URL portion of the request.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
                 }
-              ]
+              }
             }
           ],
           "tests": [
             {
               "question": {
-                "title": "What is a HTTP?",
-                "subtitle": "222",
-                "info": "",
+                "id": 1,
+                "resources": {
+                  "en": {
+                    "title": "Basic Architecture",
+                    "subtitle": "111",
+                    "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                    "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                  },
+                  "uk": {
+                    "title": "Basic Architecture",
+                    "subtitle": "111",
+                    "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                    "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                  }
+                },
+                "code": "",
                 "score": 5,
                 "answerId": 0
               },
               "answers": [
                 {
                   "id": 1,
-                  "title": "The Internet",
-                  "subtitle": "222",
-                  "info": "222",
-                  "isCorrect": false
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 1",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 1",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
                 },
                 {
                   "id": 2,
-                  "title": "The Protocol",
-                  "subtitle": "222",
-                  "info": "222",
-                  "isCorrect": true
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 2",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 2",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
                 },
                 {
                   "id": 3,
-                  "title": "The Internet",
-                  "subtitle": "222",
-                  "info": "222",
-                  "isCorrect": false
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 3",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 3",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
                 }
               ]
             }
@@ -148,102 +298,293 @@
     },
     {
       "id": 2,
-      "title": "Introduce Web Developing part 2",
-      "subtitle": "---",
       "roleIds": [
         1,
         2,
         3
       ],
       "currentUnitId": 1,
+      "currentUnitToggled": false,
+      "resources": {
+        "en": {
+          "title": "Introduce Web Developing",
+          "subtitle": "---"
+        },
+        "uk": {
+          "title": "Введення у веб розробку",
+          "subtitle": "---"
+        }
+      },
       "units": [
         {
           "id": 1,
-          "title": "HTTP - Overview",
-          "subtitle": "Basic Architecture",
           "pictureUrl": "/images/units/http.jpg",
-          "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems.",
+          "resources": {
+            "en": {
+              "title": "HTTP - Overview",
+              "subtitle": "Basic Architecture",
+              "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems."
+            },
+            "uk": {
+              "title": "HTTP - Огляд",
+              "subtitle": "Основи архітектури",
+              "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems."
+            }
+          },
           "sections": [
             {
-              "title": "Basic Architecture",
-              "subtitle": "111",
               "pictureUrl": "/images/units/cgiarch.gif",
-              "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients, and the Web server acts as a server.",
-              "examples": []
+              "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                                 ConnectionKeep-Alive",
+              "resources": {
+                "en": {
+                  "title": "Basic Architecture",
+                  "subtitle": "111",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                },
+                "uk": {
+                  "title": "Basic Architecture",
+                  "subtitle": "111",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                }
+              }
             },
             {
-              "title": "GET Method",
-              "subtitle": "222",
               "pictureUrl": "",
-              "info": "A GET request retrieves data from a web server by specifying parameters in the URL portion of the request.",
-              "examples": [
-                {
-                  "description": "The following example makes use of GET method to fetch hello.htm",
-                  "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                 Connection: Keep-Alive"
+              "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                                 ConnectionKeep-Alive",
+              "resources": {
+                "en": {
+                  "title": "GET Method",
+                  "subtitle": "222",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
                 },
-                {
-                  "description": "The server response against the above GET request will be as follows",
-                  "code": "HTTP/1.1 200 OK\n                 Date: Mon, 27 Jul 2009 12:28:53 GMT\n                 Server: Apache/2.2.14 (Win32)\n                 Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT\n                 ETag: \"34aa387-d-1568eb00\"\n                 Vary: Authorization,Accept\n                 Accept-Ranges: bytes\n                 Content-Length: 88\n                 Content-Type: text/html\n                 Connection: Closed"
+                "uk": {
+                  "title": "GET метод",
+                  "subtitle": "111",
+                  "info": "A GET request retrieves data from a web server by specifying parameters in the URL portion of the request.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
                 }
-              ]
+              }
             }
           ],
           "tests": [
             {
               "question": {
-                "text": "",
-                "score": 0
+                "id": 1,
+                "resources": {
+                  "en": {
+                    "title": "Basic Architecture",
+                    "subtitle": "111",
+                    "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                    "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                  },
+                  "uk": {
+                    "title": "Basic Architecture",
+                    "subtitle": "111",
+                    "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                    "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                  }
+                },
+                "code": "",
+                "score": 5,
+                "answerId": 0
               },
               "answers": [
                 {
-                  "text": "",
-                  "isCorrect": false
+                  "id": 1,
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 1",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 1",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
+                },
+                {
+                  "id": 2,
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 2",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 2",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
+                },
+                {
+                  "id": 3,
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 3",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 3",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
                 }
               ]
             }
           ]
         },
         {
-          "id": 2,
-          "title": "SPA - Overview",
-          "subtitle": "Single Page App",
+          "id": 1,
           "pictureUrl": "/images/units/http.jpg",
-          "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems.",
+          "resources": {
+            "en": {
+              "title": "HTTP - Overview",
+              "subtitle": "Basic Architecture",
+              "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems."
+            },
+            "uk": {
+              "title": "HTTP - Огляд",
+              "subtitle": "Основи архітектури",
+              "info": "The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems."
+            }
+          },
           "sections": [
             {
-              "title": "Basic Architecture",
-              "subtitle": "111",
               "pictureUrl": "/images/units/cgiarch.gif",
-              "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients, and the Web server acts as a server.",
-              "examples": []
+              "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                                 ConnectionKeep-Alive",
+              "resources": {
+                "en": {
+                  "title": "Basic Architecture",
+                  "subtitle": "111",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                },
+                "uk": {
+                  "title": "Basic Architecture",
+                  "subtitle": "111",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                }
+              }
             },
             {
-              "title": "GET Method",
-              "subtitle": "222",
               "pictureUrl": "",
-              "info": "A GET request retrieves data from a web server by specifying parameters in the URL portion of the request.",
-              "examples": [
-                {
-                  "description": "The following example makes use of GET method to fetch hello.htm",
-                  "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                 Connection: Keep-Alive"
+              "code": "GET /hello.htm HTTP/1.1\n                 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)\n                 Host: www.tutorialspoint.com\n                 Accept-Language: en-us\n                 Accept-Encoding: gzip, deflate\n                                 ConnectionKeep-Alive",
+              "resources": {
+                "en": {
+                  "title": "GET Method",
+                  "subtitle": "222",
+                  "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
                 },
-                {
-                  "description": "The server response against the above GET request will be as follows",
-                  "code": "HTTP/1.1 200 OK\n                 Date: Mon, 27 Jul 2009 12:28:53 GMT\n                 Server: Apache/2.2.14 (Win32)\n                 Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT\n                 ETag: \"34aa387-d-1568eb00\"\n                 Vary: Authorization,Accept\n                 Accept-Ranges: bytes\n                 Content-Length: 88\n                 Content-Type: text/html\n                 Connection: Closed"
+                "uk": {
+                  "title": "GET метод",
+                  "subtitle": "111",
+                  "info": "A GET request retrieves data from a web server by specifying parameters in the URL portion of the request.",
+                  "codeTitle": "The following example makes use of GET method to fetch hello.htm"
                 }
-              ]
+              }
             }
           ],
           "tests": [
             {
               "question": {
-                "text": "",
-                "score": 0
+                "id": 1,
+                "resources": {
+                  "en": {
+                    "title": "Basic Architecture",
+                    "subtitle": "111",
+                    "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                    "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                  },
+                  "uk": {
+                    "title": "Basic Architecture",
+                    "subtitle": "111",
+                    "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                    "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                  }
+                },
+                "code": "",
+                "score": 5,
+                "answerId": 0
               },
               "answers": [
                 {
-                  "text": "",
-                  "isCorrect": false
+                  "id": 1,
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 1",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 1",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
+                },
+                {
+                  "id": 2,
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 2",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 2",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
+                },
+                {
+                  "id": 3,
+                  "isCorrect": false,
+                  "code": "",
+                  "resources": {
+                    "en": {
+                      "title": "Answer 3",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    },
+                    "uk": {
+                      "title": "Відповідь 3",
+                      "subtitle": "111",
+                      "info": "The following diagram shows a very basic architecture of a web application and depicts where HTTP sits. The HTTP protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients,    and the Web server acts as a server.",
+                      "codeTitle": "The following example makes use of GET method to fetch hello.htm"
+                    }
+                  }
                 }
               ]
             }
