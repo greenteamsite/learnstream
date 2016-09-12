@@ -16,9 +16,9 @@ export function getModuleItem(moduleId, lang) {
 }
 
 
-export function getLatestModule() {
+export function getLatestModule(lang) {
   return dispatch => (
-    ModuleApi.getLatest().then(moduleItem =>
+    ModuleApi.getLatest(lang).then(moduleItem =>
       dispatch(getModuleItemSuccess(moduleItem)))
   );
 }

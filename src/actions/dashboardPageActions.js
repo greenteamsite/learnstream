@@ -9,10 +9,10 @@ export function getDashboardPageInfoSuccess(dashboardPageInfo) {
   };
 }
 
-export function getDashboardPageInfo() {
+export function getDashboardPageInfo(lang) {
   return dispatch => {
     // Getting the last module
-    dispatch(moduleActions.getLatestModule()).then(() => {
+    dispatch(moduleActions.getLatestModule(lang)).then(() => {
       // Add some additional fields for dashboardPageInfo
       dispatch(getDashboardPageInfoSuccess({}));
     });

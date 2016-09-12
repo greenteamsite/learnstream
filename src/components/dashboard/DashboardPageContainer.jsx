@@ -8,7 +8,7 @@ class DashboardPageContainer extends React.Component {
 
   componentDidMount() {
     // retrieve data
-    this.props.actions.getDashboardPageInfo();
+    this.props.actions.getDashboardPageInfo(this.props.userProfile.lang);
   }
 
   render() {
@@ -31,6 +31,7 @@ DashboardPageContainer.propTypes = {
   isStart: PropTypes.bool.isRequired,
   locales: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired,
+  userProfile: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
@@ -46,6 +47,7 @@ function mapStateToProps(state) {
     currentUnit,
     isStart,
     locales: state.locales.dashboardPage,
+    userProfile: state.userProfile,
   };
 }
 
