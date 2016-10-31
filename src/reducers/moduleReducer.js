@@ -8,13 +8,18 @@ export default function moduleReducer(state = initialState.currentModule, action
 
     case ActionTypes.MODULES_SET_CURRENT_UNIT_ID: {
       const newState = Object.assign({}, state);
-      newState.currentUnitId = action.answers;
+      newState.currentUnitIndex = action.unitIndex;
       return newState;
     }
 
-    case ActionTypes.MODULES_TOGGLE_CURRENT_UNIT_TO_TEST: {
+    case ActionTypes.MODULES_SET_NEXT_CURRENT_UNIT_ID: {
       const newState = Object.assign({}, state);
-      newState.currentUnitToggled = true;
+      const nextIndex = newState.currentUnitIndex + 1;
+      if (newState.units.length < nextIndex) {
+        newState.currentUnitIndex = nextIndex;
+      } else {
+        newState.currentUnitToggled = true;
+      }
       return newState;
     }
 

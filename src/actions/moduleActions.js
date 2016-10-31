@@ -23,15 +23,15 @@ export function getLatestModule(lang) {
   );
 }
 
-export function setCurrentUnit(unitId) {
+export function setCurrentUnit(unitIndex) {
   return {
     type: ActionTypes.MODULES_SET_CURRENT_UNIT_ID,
-    unitId,
+    unitIndex,
   };
 }
 
-export function toggleCurrentUnitToTest() {
+export function setNextCurrentUnit() {
   return {
-    type: ActionTypes.MODULES_TOGGLE_CURRENT_UNIT_TO_TEST,
+    type: ActionTypes.MODULES_SET_NEXT_CURRENT_UNIT_ID,
   };
 }

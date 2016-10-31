@@ -36,8 +36,8 @@ DashboardPageContainer.propTypes = {
 
 function mapStateToProps(state) {
   const currentUnit = state.currentModule.units.find((item) => (
-    item.id === state.currentModule.currentUnitId ||
-      state.currentModule.currentUnitId === 0
+    item.id === state.currentModule.currentUnitIndex ||
+      state.currentModule.currentUnitIndex === 0
   ));
 
   const isStart = currentUnit.id === state.currentModule.units[0].id;

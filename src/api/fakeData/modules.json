@@ -7,7 +7,7 @@
         2,
         3
       ],
-      "currentUnitId": 1,
+      "currentUnitIndex": 1,
       "currentUnitToggled": false,
       "resources": {
         "en": {
@@ -303,7 +303,7 @@
         2,
         3
       ],
-      "currentUnitId": 1,
+      "currentUnitIndex": 1,
       "currentUnitToggled": false,
       "resources": {
         "en": {

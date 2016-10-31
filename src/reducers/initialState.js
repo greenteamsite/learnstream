@@ -40,7 +40,7 @@ export default {
     title: '',
     subtitle: '',
     roleIds: [],
-    currentUnitId: 0,
+    currentUnitIndex: 0,
     currentUnitToggled: false,
     units: [
       {

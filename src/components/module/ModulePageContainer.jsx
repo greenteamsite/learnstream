@@ -7,15 +7,11 @@ import * as moduleActions from '../../actions/moduleActions';
 class ModulePageContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.submit = this.submit.bind(this);
+    // this.submit = this.submit.bind(this);
   }
   componentDidMount() {
     // retrieve data
     this.props.actions.getModuleItem(parseInt(this.props.params.id, 10), this.props.userProfile.lang);
-  }
-
-  submit() {
-    // this.props.moduleActions.submit({});
   }
 
   render() {
@@ -25,7 +21,7 @@ class ModulePageContainer extends React.Component {
         module={this.props.currentModule}
         locales={this.props.locales}
         currentUnitToggled={this.props.currentModule.currentUnitToggled}
-        onToggle={this.props.actions.toggleCurrentUnitToTest}
+        onClickNext={this.props.actions.setNextCurrentUnit}
         onSubmit={this.submit}
         palette={this.context.muiTheme.palette} // For example
       />
@@ -49,10 +45,7 @@ ModulePageContainer.propTypes = {
 };
 
 function mapStateToProps(state) {
-  const currentUnit = state.currentModule.units.find((item) => (
-    item.id === state.currentModule.currentUnitId ||
-      state.currentModule.currentUnitId === 0
-  ));
+  const currentUnit = state.currentModule.units[state.currentModule.currentUnitIndex];
 
   return {
     currentUnit,

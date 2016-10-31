@@ -34,8 +34,8 @@ function UnitBox(props) {
           :
             <RaisedButton
               labelPosition="before"
-              label={props.btnToggleLabel}
-              onClick={props.onToggle}
+              label={props.btnNextLabel}
+              onClick={props.onClickNext}
               icon={<ForwardIcon />}
             />
         }
@@ -52,9 +52,9 @@ UnitBox.propTypes = {
   sections: PropTypes.array.isRequired,
   tests: PropTypes.array,
   toggled: PropTypes.bool,
-  onToggle: PropTypes.func.isRequired,
+  onClickNext: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
-  btnToggleLabel: PropTypes.string.isRequired,
+  btnNextLabel: PropTypes.string.isRequired,
   btnSubmitLabel: PropTypes.string.isRequired,
 };
 

@@ -13,6 +13,6 @@
     "modulePage": {
         "title": "Learning stream - unit",
         "btnSubmitLabel": "Submit",
-        "btnToggleLabel": "Check knowledge"
+        "btnNextLabel": "Next"
     }
 }
