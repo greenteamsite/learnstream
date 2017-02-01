@@ -42,7 +42,7 @@
     "react-tap-event-plugin": "latest",
     "redux": "latest",
     "redux-thunk": "latest",
-    "webpack": "latest",
+    "webpack": "1.13",
     "webpack-dev-middleware": "latest",
     "webpack-hot-middleware": "latest"
   },
